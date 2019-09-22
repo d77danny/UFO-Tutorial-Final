@@ -27,5 +27,8 @@ public class ObstacleBehavior : MonoBehaviour
         float fracJourney = distCovered / journeyLength;
 
         transform.position = Vector2.Lerp(startMarker.position, endMarker.position, Mathf.PingPong(fracJourney, 1));
+
+        if (Input.GetKey("escape"))
+            Application.Quit();
     }
 }
